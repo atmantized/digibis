@@ -247,6 +247,68 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Book Showcase Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              {/* Top row books */}
+              <div className="space-y-4">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F4d254f2e6ab74a2e8941ee9817d56de4?format=webp&width=800"
+                    alt="Kamu gak sendiri book cover"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F065beee2a16c4aac9a5855e0ba03e228?format=webp&width=800"
+                    alt="Laut Bercerita book cover"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Bottom row books */}
+              <div className="space-y-4">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F67f8de85ff8a46b89af53d5c4496c57c?format=webp&width=800"
+                    alt="Sapiens Grafis vol.2 book cover"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fdba207732d644d97804bcd42af211a51?format=webp&width=800"
+                    alt="Start With Why book cover"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Temukan Buku Favoritmu Disini
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Dengan buku fisik, Anda dapat merasakan pengalaman membaca yang
+                lebih nyata dan mendalam. Nikmati aroma khas kertas, sensasi
+                membalik halaman, dan fokus penuh tanpa gangguan layar. Bawa
+                buku favorit Anda ke taman, kafe, atau ruang santai, dan rasakan
+                kenikmatan membaca secara langsung di setiap tempat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Books */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
