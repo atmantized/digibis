@@ -390,8 +390,8 @@ export default function Index() {
             {/* Sapiens Grafis vol.2 */}
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200">
-                <div className="absolute inset-0 flex flex-col items-center justify-between p-4">
-                  <div className="text-center mt-2">
+                <div className="absolute inset-0 flex flex-col p-3">
+                  <div className="text-center mb-3">
                     <div className="text-lg font-bold text-gray-800 mb-1">
                       Sapiens
                     </div>
@@ -399,15 +399,21 @@ export default function Index() {
                       GRAFIS VOL.2
                     </div>
                   </div>
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="relative w-20 h-20">
-                      <div className="absolute inset-0 bg-orange-200 rounded-full"></div>
-                      <div className="absolute inset-2 bg-orange-300 rounded-full"></div>
-                      <div className="absolute top-4 left-4 w-8 h-8 bg-orange-500 rounded-full"></div>
-                      <div className="absolute top-6 left-6 w-4 h-4 bg-orange-600 rounded-full"></div>
+                  <div className="flex-1 flex items-center justify-center relative">
+                    {/* Archaeological/cave painting style illustration */}
+                    <div className="relative w-full h-24 bg-gradient-to-br from-orange-100 to-amber-200 rounded-lg overflow-hidden">
+                      <div className="absolute inset-2">
+                        {/* Simple cave painting style figures */}
+                        <div className="w-8 h-8 bg-orange-600 rounded-full absolute top-1 left-2"></div>
+                        <div className="w-6 h-6 bg-amber-700 rounded-full absolute top-3 right-3"></div>
+                        <div className="w-4 h-8 bg-orange-800 absolute bottom-2 left-4"></div>
+                        <div className="w-3 h-6 bg-amber-800 absolute bottom-1 right-2"></div>
+                        {/* Simple landscape elements */}
+                        <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-orange-300 to-transparent"></div>
+                      </div>
                     </div>
                   </div>
-                  <div className="text-[10px] text-gray-700 text-center font-medium tracking-wider">
+                  <div className="text-[10px] text-gray-700 text-center font-medium tracking-wider mt-2">
                     YUVAL NOAH HARARI
                   </div>
                 </div>
@@ -422,24 +428,37 @@ export default function Index() {
 
             {/* Laut Bercerita */}
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 flex flex-col items-center justify-between p-4 text-white">
-                  <div className="w-full h-16 bg-gradient-to-b from-blue-300/30 to-transparent rounded-t-xl"></div>
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-14 h-14 bg-white/20 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                        <div className="w-8 h-8 bg-white/40 rounded-md"></div>
-                      </div>
-                      <div className="text-base font-bold tracking-wide">
-                        LAUT
-                      </div>
-                      <div className="text-base font-bold tracking-wide">
-                        BERCERITA
-                      </div>
+              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative">
+                <div className="absolute inset-0 p-3">
+                  {/* Ocean waves and maritime elements */}
+                  <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-blue-200/40 to-transparent"></div>
+                  <div className="absolute top-6 left-2 right-2 h-6 bg-blue-300/30 rounded-full"></div>
+                  <div className="absolute top-10 left-4 right-4 h-4 bg-blue-400/40 rounded-full"></div>
+
+                  {/* Central illustration area */}
+                  <div className="absolute inset-x-4 top-16 bottom-16 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <div className="w-16 h-12 bg-white/30 rounded-lg relative overflow-hidden">
+                      <div className="absolute inset-1 bg-blue-600/40 rounded"></div>
+                      <div className="absolute top-2 left-2 w-4 h-3 bg-white/60 rounded-sm"></div>
+                      <div className="absolute bottom-2 right-2 w-3 h-2 bg-blue-200/80 rounded-sm"></div>
                     </div>
                   </div>
-                  <div className="text-[10px] text-center opacity-90 tracking-wider">
-                    LEILA S. CHUDORI
+
+                  {/* Title */}
+                  <div className="absolute bottom-8 left-0 right-0 text-center text-white">
+                    <div className="text-sm font-bold tracking-wide mb-1">
+                      LAUT
+                    </div>
+                    <div className="text-sm font-bold tracking-wide">
+                      BERCERITA
+                    </div>
+                  </div>
+
+                  {/* Author */}
+                  <div className="absolute bottom-2 left-0 right-0 text-center">
+                    <div className="text-[10px] text-white/90 tracking-wider">
+                      LEILA S. CHUDORI
+                    </div>
                   </div>
                 </div>
               </div>
