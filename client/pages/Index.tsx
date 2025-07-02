@@ -330,29 +330,38 @@ export default function Index() {
       </section>
 
       {/* Popular Books */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-            <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-md overflow-hidden mb-3 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-center text-white p-3">
-                  <div className="w-6 h-6 border-2 border-white rounded-full mb-3 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
+            {/* Glossy Gentleman Guide */}
+            <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-full aspect-[2.8/4] bg-black rounded-lg overflow-hidden mb-4 relative">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+                  <div className="flex items-center space-x-1 mt-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
                   </div>
-                  <div className="text-[10px] text-center leading-tight font-light">
-                    GLOSSY
-                    <br />
-                    GENTLEMAN
-                    <br />
-                    GUIDE
+                  <div className="text-center">
+                    <div className="w-8 h-8 bg-white rounded-full mx-auto mb-3 flex items-center justify-center">
+                      <div className="w-4 h-4 bg-black rounded-full"></div>
+                    </div>
+                    <div className="text-xs font-light leading-tight">
+                      GLOSSY
+                      <br />
+                      GENTLEMAN
+                      <br />
+                      GUIDE
+                    </div>
                   </div>
-                  <div className="mt-auto text-[8px] opacity-80">
-                    JET WIDODO • ADI SAPOETRO • LEO SIRTHUAS
+                  <div className="text-[8px] text-center opacity-90 leading-tight">
+                    JET WIDODO, ADI SAPOETRO
+                    <br />
+                    LEO SIRTHUAS
                   </div>
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="font-medium text-gray-900 text-sm mb-1">
+              <div className="text-center space-y-1">
+                <h3 className="font-medium text-gray-900 text-sm">
                   Glossy Gentleman Guide
                 </h3>
                 <p className="text-xs text-gray-600">
@@ -361,94 +370,111 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-full aspect-[3/4] bg-red-600 rounded-md overflow-hidden mb-3 flex items-center justify-center">
-                <div className="text-white text-center font-black">
-                  <div className="text-lg leading-tight">START</div>
-                  <div className="text-lg leading-tight">WITH</div>
-                  <div className="text-lg leading-tight">WHY</div>
+            {/* Start With Why */}
+            <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-full aspect-[2.8/4] bg-red-600 rounded-lg overflow-hidden mb-4 flex items-center justify-center">
+                <div className="text-white text-center font-black text-xl leading-none">
+                  <div className="mb-1">START</div>
+                  <div className="mb-1">WITH</div>
+                  <div>WHY</div>
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="font-medium text-gray-900 text-sm mb-1">
+              <div className="text-center space-y-1">
+                <h3 className="font-medium text-gray-900 text-sm">
                   Start With Why
                 </h3>
                 <p className="text-xs text-gray-600">Simon Sinek</p>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-full aspect-[3/4] bg-gray-100 rounded-md overflow-hidden mb-3 relative">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-3">
-                  <div className="text-center mb-2">
-                    <div className="text-lg font-bold text-gray-800 mb-1">
+            {/* Sapiens Grafis vol.2 */}
+            <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-full aspect-[2.8/4] bg-gray-50 rounded-lg overflow-hidden mb-4 relative border">
+                <div className="absolute inset-0 flex flex-col items-center justify-between p-3">
+                  <div className="text-center mt-2">
+                    <div className="text-base font-bold text-gray-800">
                       Sapiens
                     </div>
-                    <div className="text-xs text-gray-600">GRAFIS VOL.2</div>
-                  </div>
-                  <div className="flex-1 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center">
-                      <div className="w-8 h-8 bg-amber-400 rounded-full"></div>
+                    <div className="text-xs text-gray-600 font-medium">
+                      GRAFIS VOL.2
                     </div>
                   </div>
-                  <div className="text-[8px] text-gray-600 text-center">
+                  <div className="flex-1 flex items-center justify-center">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-orange-300 rounded-full"></div>
+                      <div className="absolute inset-2 bg-orange-400 rounded-full"></div>
+                      <div className="absolute top-3 left-3 w-6 h-6 bg-amber-600 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="text-[10px] text-gray-700 text-center font-medium">
                     YUVAL NOAH HARARI
                   </div>
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="font-medium text-gray-900 text-sm mb-1">
+              <div className="text-center space-y-1">
+                <h3 className="font-medium text-gray-900 text-sm">
                   Sapiens Grafis vol.2
                 </h3>
                 <p className="text-xs text-gray-600">Yuval Noah Harari</p>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-md overflow-hidden mb-3 relative">
+            {/* Laut Bercerita */}
+            <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-full aspect-[2.8/4] bg-gradient-to-br from-sky-400 via-blue-500 to-blue-600 rounded-lg overflow-hidden mb-4 relative">
                 <div className="absolute inset-0 flex flex-col items-center justify-between p-3 text-white">
-                  <div className="text-center">
-                    <div className="text-lg font-bold mb-1">LAUT</div>
-                    <div className="text-sm font-medium">BERCERITA</div>
-                  </div>
+                  <div className="w-full h-20 bg-gradient-to-b from-blue-300/30 to-transparent rounded-t-lg"></div>
                   <div className="flex-1 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center">
-                      <div className="w-8 h-8 bg-white rounded-full"></div>
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-white/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                        <div className="w-6 h-6 bg-white/40 rounded"></div>
+                      </div>
+                      <div className="text-sm font-bold">LAUT</div>
+                      <div className="text-sm font-bold">BERCERITA</div>
                     </div>
                   </div>
-                  <div className="text-[8px] text-center opacity-90">
+                  <div className="text-[9px] text-center opacity-90">
                     LEILA S. CHUDORI
                   </div>
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="font-medium text-gray-900 text-sm mb-1">
+              <div className="text-center space-y-1">
+                <h3 className="font-medium text-gray-900 text-sm">
                   Laut Bercerita
                 </h3>
                 <p className="text-xs text-gray-600">Leila S. Chudori</p>
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-md overflow-hidden mb-3 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-center text-white p-3">
-                  <div className="w-6 h-6 border-2 border-white rounded-full mb-3 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
+            {/* Glossy Gentleman Guide (repeat) */}
+            <div className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-full aspect-[2.8/4] bg-black rounded-lg overflow-hidden mb-4 relative">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+                  <div className="flex items-center space-x-1 mt-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                    <div className="w-1 h-1 bg-white rounded-full"></div>
                   </div>
-                  <div className="text-[10px] text-center leading-tight font-light">
-                    GLOSSY
-                    <br />
-                    GENTLEMAN
-                    <br />
-                    GUIDE
+                  <div className="text-center">
+                    <div className="w-8 h-8 bg-white rounded-full mx-auto mb-3 flex items-center justify-center">
+                      <div className="w-4 h-4 bg-black rounded-full"></div>
+                    </div>
+                    <div className="text-xs font-light leading-tight">
+                      GLOSSY
+                      <br />
+                      GENTLEMAN
+                      <br />
+                      GUIDE
+                    </div>
                   </div>
-                  <div className="mt-auto text-[8px] opacity-80">
-                    JET WIDODO • ADI SAPOETRO • LEO SIRTHUAS
+                  <div className="text-[8px] text-center opacity-90 leading-tight">
+                    JET WIDODO, ADI SAPOETRO
+                    <br />
+                    LEO SIRTHUAS
                   </div>
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="font-medium text-gray-900 text-sm mb-1">
+              <div className="text-center space-y-1">
+                <h3 className="font-medium text-gray-900 text-sm">
                   Glossy Gentleman Guide
                 </h3>
                 <p className="text-xs text-gray-600">
