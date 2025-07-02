@@ -314,17 +314,6 @@ export default function Index() {
             alt="Book Sale Now - Discover literary treasures at incredible prices"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/20"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center text-white">
-            <Button
-              size="lg"
-              className="bg-white/90 text-gray-900 hover:bg-white text-lg px-8"
-            >
-              Belanja Sekarang
-            </Button>
-          </div>
         </div>
       </section>
 
