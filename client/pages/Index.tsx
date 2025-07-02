@@ -307,22 +307,21 @@ export default function Index() {
       </section>
 
       {/* Sale Banner */}
-      <section className="py-16 bg-gradient-to-r from-orange-400 to-amber-500 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <div className="inline-flex items-center space-x-4 mb-6">
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                <Award className="h-5 w-5" />
-              </div>
-              <h2 className="text-4xl font-bold">Book Sale Now</h2>
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                <Award className="h-5 w-5" />
-              </div>
-            </div>
-            <p className="text-xl mb-8">
-              Diskon hingga 50% untuk semua kategori buku!
-            </p>
-            <Button size="lg" variant="secondary" className="text-lg px-8">
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F7af1206640364648829568c105a7e0da?format=webp&width=800"
+            alt="Book Sale Now - Discover literary treasures at incredible prices"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center text-white">
+            <Button
+              size="lg"
+              className="bg-white/90 text-gray-900 hover:bg-white text-lg px-8"
+            >
               Belanja Sekarang
             </Button>
           </div>
