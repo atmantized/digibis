@@ -330,49 +330,102 @@ export default function Index() {
       </section>
 
       {/* Popular Books */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Popular Books
-            </h2>
-            <p className="text-muted-foreground">
-              Buku-buku yang paling banyak dibaca
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[...popularBooks, ...popularBooks].map((book, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1"
-              >
-                <div className="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                  <BookOpen className="h-8 w-8 text-gray-500" />
-                </div>
-                <CardContent className="p-3">
-                  <h3 className="font-semibold text-sm mb-1 line-clamp-2">
-                    {book.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground mb-2">
-                    {book.author}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-primary text-sm">
-                      {book.price}
-                    </span>
-                    <div className="flex items-center">
-                      <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
-                      <span className="ml-1 text-xs text-muted-foreground">
-                        {book.rating}
-                      </span>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-full aspect-[3/4] bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                <div className="w-full h-full bg-gray-900 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-8 h-8 bg-white rounded-full mx-auto mb-2"></div>
+                    <div className="text-xs font-light">
+                      Glossy Gentleman Guide
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <Button variant="outline">Lihat Semua</Button>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="font-medium text-foreground text-sm mb-1">
+                  Glossy Gentleman Guide
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Jet Widodo, Adi Sapoetro, Leo Sirthuas
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-full aspect-[3/4] bg-red-600 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                <div className="text-white text-center font-bold">
+                  <div className="text-xl mb-2">START</div>
+                  <div className="text-xl mb-2">WITH</div>
+                  <div className="text-xl">WHY</div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="font-medium text-foreground text-sm mb-1">
+                  Start With Why
+                </h3>
+                <p className="text-xs text-muted-foreground">Simon Sinek</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-full aspect-[3/4] bg-gradient-to-br from-blue-100 to-amber-100 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                <div className="text-center">
+                  <div className="text-lg font-bold text-gray-700 mb-1">
+                    Sapiens
+                  </div>
+                  <div className="text-sm text-gray-600">Grafis vol.2</div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="font-medium text-foreground text-sm mb-1">
+                  Sapiens Grafis vol.2
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Yuval Noah Harari
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-full aspect-[3/4] bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-lg font-bold mb-2">LAUT</div>
+                  <div className="text-sm">BERCERITA</div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="font-medium text-foreground text-sm mb-1">
+                  Laut Bercerita
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Leila S. Chudori
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-3">
+              <div className="w-full aspect-[3/4] bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+                <div className="w-full h-full bg-gray-900 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-8 h-8 bg-white rounded-full mx-auto mb-2"></div>
+                    <div className="text-xs font-light">
+                      Glossy Gentleman Guide
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="font-medium text-foreground text-sm mb-1">
+                  Glossy Gentleman Guide
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  Jet Widodo, Adi Sapoetro, Leo Sirthuas
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
