@@ -855,50 +855,59 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Animated Partner Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-6 bg-background rounded-lg hover:shadow-lg transition-all duration-500 hover:scale-105"
-                style={{
-                  animation: `floatLR ${3 + (index % 3)}s ease-in-out ${index * 0.2}s infinite alternate`,
-                }}
-              >
-                <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
-                  <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
-                    {partner.name}
-                  </span>
+          {/* Infinite Horizontal Scrolling Partners */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set of partners */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
+                >
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                      {partner.name}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
+                >
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                      {partner.name}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* CSS Keyframes for floating animation */}
+        {/* CSS Keyframes for infinite scrolling */}
         <style jsx>{`
-          @keyframes floatLR {
+          @keyframes scroll {
             0% {
-              transform: translateX(-8px) translateY(-2px);
-            }
-            50% {
-              transform: translateX(0px) translateY(2px);
+              transform: translateX(0);
             }
             100% {
-              transform: translateX(8px) translateY(-2px);
+              transform: translateX(-50%);
             }
           }
 
-          @keyframes floatLR2 {
-            0% {
-              transform: translateX(6px) translateY(1px);
-            }
-            50% {
-              transform: translateX(-2px) translateY(-3px);
-            }
-            100% {
-              transform: translateX(-6px) translateY(1px);
-            }
+          .animate-scroll {
+            animation: scroll 20s linear infinite;
+            width: calc(
+              200px * ${partners.length} * 2 + 32px * ${partners.length} * 2
+            );
+          }
+
+          .animate-scroll:hover {
+            animation-play-state: paused;
           }
         `}</style>
       </section>
