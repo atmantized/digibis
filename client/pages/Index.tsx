@@ -25,6 +25,8 @@ export default function Index() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsBookSectionVisible(true);
+        } else {
+          setIsBookSectionVisible(false);
         }
       },
       {
