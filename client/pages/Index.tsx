@@ -258,8 +258,16 @@ export default function Index() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 text-gray-600" />
+              <div className="hidden md:flex items-center space-x-3">
+                <Button
+                  variant="outline"
+                  className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
+                >
+                  Partner With Us
+                </Button>
+                <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
+                  Register As Client
+                </Button>
               </div>
               <Button variant="ghost" size="icon">
                 <ShoppingCart className="h-5 w-5" />
