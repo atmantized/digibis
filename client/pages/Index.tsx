@@ -227,7 +227,7 @@ export default function Index() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F16232a4b310c4e859ce7f6c01ff260e6?format=webp&width=800"
                 alt="Person reading book illustration"
-                className="max-w-full h-auto w-96"
+                className="w-auto flex-grow"
               />
             </div>
           </div>
