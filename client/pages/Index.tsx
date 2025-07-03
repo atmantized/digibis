@@ -19,6 +19,31 @@ export default function Index() {
   const [currentWeek, setCurrentWeek] = useState(1);
   const [isBookSectionVisible, setIsBookSectionVisible] = useState(false);
   const bookSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsBookSectionVisible(true);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px",
+      },
+    );
+
+    if (bookSectionRef.current) {
+      observer.observe(bookSectionRef.current);
+    }
+
+    return () => {
+      if (bookSectionRef.current) {
+        observer.unobserve(bookSectionRef.current);
+      }
+    };
+  }, []);
+
   const featuredBooks = [
     {
       title: "The Silent Patient",
