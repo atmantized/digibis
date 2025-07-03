@@ -221,6 +221,10 @@ export default function Index() {
     { name: "Mizan", logo: "/placeholder.svg" },
     { name: "Erlangga", logo: "/placeholder.svg" },
     { name: "Bentang Pustaka", logo: "/placeholder.svg" },
+    { name: "Kompas", logo: "/placeholder.svg" },
+    { name: "Elex Media", logo: "/placeholder.svg" },
+    { name: "Gema Insani", logo: "/placeholder.svg" },
+    { name: "Alvabet", logo: "/placeholder.svg" },
   ];
 
   const faqs = [
@@ -840,7 +844,7 @@ export default function Index() {
       </section>
 
       {/* Media Partners */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -850,14 +854,19 @@ export default function Index() {
               Dipercaya oleh penerbit terkemuka
             </p>
           </div>
+
+          {/* Animated Partner Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-6 bg-background rounded-lg hover:shadow-md transition-shadow"
+                className="flex items-center justify-center p-6 bg-background rounded-lg hover:shadow-lg transition-all duration-500 hover:scale-105"
+                style={{
+                  animation: `floatLR ${3 + (index % 3)}s ease-in-out ${index * 0.2}s infinite alternate`,
+                }}
               >
-                <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center">
-                  <span className="text-xs text-gray-600 font-semibold">
+                <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
+                  <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
                     {partner.name}
                   </span>
                 </div>
@@ -865,6 +874,33 @@ export default function Index() {
             ))}
           </div>
         </div>
+
+        {/* CSS Keyframes for floating animation */}
+        <style jsx>{`
+          @keyframes floatLR {
+            0% {
+              transform: translateX(-8px) translateY(-2px);
+            }
+            50% {
+              transform: translateX(0px) translateY(2px);
+            }
+            100% {
+              transform: translateX(8px) translateY(-2px);
+            }
+          }
+
+          @keyframes floatLR2 {
+            0% {
+              transform: translateX(6px) translateY(1px);
+            }
+            50% {
+              transform: translateX(-2px) translateY(-3px);
+            }
+            100% {
+              transform: translateX(-6px) translateY(1px);
+            }
+          }
+        `}</style>
       </section>
 
       {/* Features */}
