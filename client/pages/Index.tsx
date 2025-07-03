@@ -256,7 +256,7 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F4d254f2e6ab74a2e8941ee9817d56de4?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fe6c2111709f8400aa3900aae1a0b7abd"
                     alt="Kamu gak sendiri book cover"
                     className="w-full h-full object-cover"
                   />
@@ -265,7 +265,7 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F065beee2a16c4aac9a5855e0ba03e228?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
                     alt="Laut Bercerita book cover"
                     className="w-full h-full object-cover"
                   />
@@ -276,7 +276,7 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F67f8de85ff8a46b89af53d5c4496c57c?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Ffe044db04e67486eb2a974f49091b8d4"
                     alt="Sapiens Grafis vol.2 book cover"
                     className="w-full h-full object-cover"
                   />
@@ -285,7 +285,7 @@ export default function Index() {
               <div className="space-y-4">
                 <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fdba207732d644d97804bcd42af211a51?format=webp&width=800"
+                    src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fd1012090813142299708a56fa09c5993"
                     alt="Start With Why book cover"
                     className="w-full h-full object-cover"
                   />
@@ -370,13 +370,12 @@ export default function Index() {
 
       {/* Sale Banner */}
       <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F7e7ec2680f4d444b86279c5331f42098?format=webp&width=800"
-            alt="Book Sale Now - Discover literary treasures at incredible prices"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F609323a6c67e4188bc36f492688b7433"
+          alt="Book Sale Now - Discover literary treasures at incredible prices"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0" />
       </section>
 
       {/* Popular Books */}
