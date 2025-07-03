@@ -207,42 +207,37 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-100">
+      <section className="py-20 bg-gradient-to-br from-yellow-100 to-orange-200">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center min-h-[500px]">
+            <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   Jelajahi Dunia Lewat
-                  <span className="block text-primary">Buku, Mulai dari</span>
-                  <span className="block text-primary">AllBook</span>
+                  <br />
+                  Buku, Mulai dari
+                  <br />
+                  <span className="text-foreground">AllBook</span>
                 </h1>
-                <p className="text-lg text-muted-foreground">
-                  Temukan ribuan buku berkualitas dengan harga terjangkau. Dari
-                  novel terbaru hingga buku klasik, semua ada di sini untuk
-                  memperluas wawasan Anda.
+                <p className="text-lg text-muted-foreground max-w-md">
+                  Nikmati kemudahan membeli buku kapan saja dan di mana saja,
+                  hanya dengan beberapa klik.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8">
-                  Jelajahi Sekarang
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8">
-                  <Play className="mr-2 h-5 w-5" />
-                  Tonton Demo
-                </Button>
-              </div>
             </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-orange-200 to-amber-300 rounded-3xl flex items-center justify-center">
-                <div className="text-center">
-                  <BookOpen className="h-24 w-24 text-primary mx-auto mb-4" />
-                  <p className="text-primary font-semibold">
-                    Hero Illustration
-                  </p>
-                </div>
-              </div>
+            <div className="flex justify-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F2ab2668d14ec40c5ad0ca6fae6730b80?format=webp&width=800"
+                alt="Person reading book illustration"
+                className="max-w-full h-auto w-96"
+              />
             </div>
+          </div>
+        </div>
+        {/* Scroll indicator */}
+        <div className="flex justify-center mt-8">
+          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md">
+            <ChevronDown className="h-5 w-5 text-gray-600" />
           </div>
         </div>
       </section>
