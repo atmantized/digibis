@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +17,8 @@ import {
 
 export default function Index() {
   const [currentWeek, setCurrentWeek] = useState(1);
+  const [isBookSectionVisible, setIsBookSectionVisible] = useState(false);
+  const bookSectionRef = useRef(null);
   const featuredBooks = [
     {
       title: "The Silent Patient",
@@ -323,56 +325,140 @@ export default function Index() {
       </section>
 
       {/* Book Showcase Section */}
-      <section className="py-16 bg-gray-50">
+      <section
+        ref={bookSectionRef}
+        className="py-16 bg-gray-50 overflow-hidden"
+      >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="grid grid-cols-2 gap-4">
+            {/* Book Grid with Staggered Animation */}
+            <div
+              className={`grid grid-cols-2 gap-4 transition-all duration-1000 ease-out ${
+                isBookSectionVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-12"
+              }`}
+            >
               {/* Top row books */}
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "200ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 -rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fe6c2111709f8400aa3900aae1a0b7abd"
                     alt="Kamu gak sendiri book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "400ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
                     alt="Laut Bercerita book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
 
               {/* Bottom row books */}
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "600ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Ffe044db04e67486eb2a974f49091b8d4"
                     alt="Sapiens Grafis vol.2 book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "800ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 -rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fd1012090813142299708a56fa09c5993"
                     alt="Start With Why book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            {/* Text Content with Animation */}
+            <div
+              className={`space-y-6 transition-all duration-1000 ease-out ${
+                isBookSectionVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-12"
+              }`}
+              style={{ transitionDelay: "300ms" }}
+            >
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-foreground transition-all duration-800 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: "500ms" }}
+              >
                 Temukan Buku Favoritmu Disini
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p
+                className={`text-muted-foreground leading-relaxed transition-all duration-800 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: "700ms" }}
+              >
                 Dengan buku fisik, Anda dapat merasakan pengalaman membaca yang
                 lebih nyata dan mendalam. Nikmati aroma khas kertas, sensasi
                 membalik halaman, dan fokus penuh tanpa gangguan layar. Bawa
