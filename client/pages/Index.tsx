@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,9 +15,35 @@ import {
   Search,
 } from "lucide-react";
 
-
 export default function Index() {
   const [currentWeek, setCurrentWeek] = useState(1);
+  const [isBookSectionVisible, setIsBookSectionVisible] = useState(false);
+  const bookSectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsBookSectionVisible(true);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px",
+      },
+    );
+
+    if (bookSectionRef.current) {
+      observer.observe(bookSectionRef.current);
+    }
+
+    return () => {
+      if (bookSectionRef.current) {
+        observer.unobserve(bookSectionRef.current);
+      }
+    };
+  }, []);
+
   const featuredBooks = [
     {
       title: "The Silent Patient",
@@ -215,7 +241,6 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container mx-auto px-4 py-4">
@@ -223,8 +248,8 @@ export default function Index() {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/airbook_logo.png" 
-                  className="w-full h-full object-cover" 
+                  src="/airbook_logo.png"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <span className="text-lg font-medium text-foreground">
@@ -260,8 +285,16 @@ export default function Index() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 text-gray-600" />
+              <div className="hidden md:flex items-center space-x-3">
+                <Button
+                  variant="outline"
+                  className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
+                >
+                  Partner With Us
+                </Button>
+                <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
+                  Register As Client
+                </Button>
               </div>
               <Button variant="ghost" size="icon">
                 <ShoppingCart className="h-5 w-5" />
@@ -278,7 +311,6 @@ export default function Index() {
       <section className="relative py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            
             {/* Text Content - Adjusted for smaller size */}
             <div className="space-y-6 text-center md:text-left md:pl-8">
               <h1 className="text-4xl md:text-4xl lg:text-5xl font-serif font-medium text-stone-800 leading-tight">
@@ -289,12 +321,13 @@ export default function Index() {
                 <span className="font-bold">AIRBook</span>
               </h1>
               <p className="text-lg text-stone-600 max-w-md mx-auto md:mx-0">
-                Nikmati kemudahan membeli buku kapan saja dan di mana saja, hanya dengan beberapa klik.
+                Nikmati kemudahan membeli buku kapan saja dan di mana saja,
+                hanya dengan beberapa klik.
               </p>
               <div className="pt-4">
-                 <button className="bg-stone-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-stone-700 transition-all duration-300 shadow-lg">
-                    Mulai Berbelanja
-                 </button>
+                <button className="bg-[#664229] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#664229]/90 transition-all duration-300 shadow-lg">
+                  Mulai Berbelanja
+                </button>
               </div>
             </div>
 
@@ -304,7 +337,7 @@ export default function Index() {
                 src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F16232a4b310c4e859ce7f6c01ff260e6?format=webp&width=800"
                 alt="Ilustrasi seseorang sedang membaca buku di atas tumpukan buku besar"
                 className="w-full max-w-md lg:max-w-lg h-auto"
-                />
+              />
             </div>
           </div>
         </div>
@@ -317,56 +350,140 @@ export default function Index() {
       </section>
 
       {/* Book Showcase Section */}
-      <section className="py-16 bg-gray-50">
+      <section
+        ref={bookSectionRef}
+        className="py-16 bg-gray-50 overflow-hidden"
+      >
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="grid grid-cols-2 gap-4">
+            {/* Book Grid with Staggered Animation */}
+            <div
+              className={`grid grid-cols-2 gap-4 transition-all duration-1000 ease-out ${
+                isBookSectionVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-12"
+              }`}
+            >
               {/* Top row books */}
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "200ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 -rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fe6c2111709f8400aa3900aae1a0b7abd"
                     alt="Kamu gak sendiri book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "400ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
                     alt="Laut Bercerita book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
 
               {/* Bottom row books */}
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "600ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Ffe044db04e67486eb2a974f49091b8d4"
                     alt="Sapiens Grafis vol.2 book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
-              <div className="space-y-4">
-                <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg">
+              <div
+                className={`space-y-4 transition-all duration-1000 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: "800ms" }}
+              >
+                <div
+                  className={`aspect-[3/4] rounded-lg overflow-hidden shadow-lg transition-all duration-700 ease-out hover:shadow-2xl hover:scale-105 ${
+                    isBookSectionVisible
+                      ? "scale-100 rotate-0"
+                      : "scale-95 -rotate-2"
+                  }`}
+                >
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fd1012090813142299708a56fa09c5993"
                     alt="Start With Why book cover"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            {/* Text Content with Animation */}
+            <div
+              className={`space-y-6 transition-all duration-1000 ease-out ${
+                isBookSectionVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-12"
+              }`}
+              style={{ transitionDelay: "300ms" }}
+            >
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-foreground transition-all duration-800 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: "500ms" }}
+              >
                 Temukan Buku Favoritmu Disini
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p
+                className={`text-muted-foreground leading-relaxed transition-all duration-800 ease-out ${
+                  isBookSectionVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
+                style={{ transitionDelay: "700ms" }}
+              >
                 Dengan buku fisik, Anda dapat merasakan pengalaman membaca yang
                 lebih nyata dan mendalam. Nikmati aroma khas kertas, sensasi
                 membalik halaman, dan fokus penuh tanpa gangguan layar. Bawa
@@ -598,7 +715,7 @@ export default function Index() {
                 menjelajahi keajaiban cerita, dan memperluas wawasan melalui
                 buku-buku yang tentara.
               </p>
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md">
+              <Button className="bg-[#664229] hover:bg-[#664229]/90 text-white px-6 py-2 rounded-md">
                 Learn More
               </Button>
             </div>
@@ -665,8 +782,8 @@ export default function Index() {
                   onClick={() => setCurrentWeek(week.week)}
                   className={`px-6 py-2 rounded-md font-medium transition-colors ${
                     currentWeek === week.week
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-primary"
+                      ? "bg-[#664229] text-white"
+                      : "text-muted-foreground hover:text-[#664229]"
                   }`}
                 >
                   WEEK {week.week}
@@ -707,7 +824,7 @@ export default function Index() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                          className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white"
                         >
                           Learn More
                         </Button>
@@ -821,59 +938,97 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-    <footer className="bg-[#664229] text-stone-300 py-12">
+      <footer className="bg-[#664229] text-stone-300 py-12">
         <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                {/* Column 1: Brand and Social Media */}
-                <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                        <BookOpen className="h-8 w-8 text-white" />
-                        <span className="text-xl font-bold text-white">AirBook</span>
-                    </div>
-                    <p className="text-stone-300 text-sm">
-                        Platform terpercaya untuk menemukan dan membeli buku berkualitas dengan harga terjangkau.
-                    </p>
-                    
-                </div>
-
-                {/* Column 2: Categories */}
-                <div>
-                    <h3 className="font-bold text-white mb-4">Kategori</h3>
-                    <ul className="space-y-2 text-sm text-stone-300">
-                        <li><a href="#" className="hover:text-white transition-colors">Fiksi</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Non-Fiksi</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Bisnis</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Teknologi</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Sejarah</a></li>
-                    </ul>
-                </div>
-
-                {/* Column 3: Services */}
-                <div>
-                    <h3 className="font-bold text-white mb-4">Layanan</h3>
-                    <ul className="space-y-2 text-sm text-stone-300">
-                        <li><a href="#" className="hover:text-white transition-colors">Bantuan</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Pembayaran</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Pengiriman</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Pengembalian</a></li>
-                    </ul>
-                </div>
-
-                {/* Column 4: Contact */}
-                <div>
-                    <h3 className="font-bold text-white mb-4">Kontak</h3>
-                    <ul className="space-y-2 text-sm text-stone-300">
-                        <li>Email: info@airbook.id</li>
-                        <li>Telepon: (021) 1234-5678</li>
-                        <li>Alamat: Jakarta, Indonesia</li>
-                    </ul>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Column 1: Brand and Social Media */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <BookOpen className="h-8 w-8 text-white" />
+                <span className="text-xl font-bold text-white">AirBook</span>
+              </div>
+              <p className="text-stone-300 text-sm">
+                Platform terpercaya untuk menemukan dan membeli buku berkualitas
+                dengan harga terjangkau.
+              </p>
             </div>
-            <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-stone-400">
-                <p>&copy; {new Date().getFullYear()} AirBook. All rights reserved.</p>
+
+            {/* Column 2: Categories */}
+            <div>
+              <h3 className="font-bold text-white mb-4">Kategori</h3>
+              <ul className="space-y-2 text-sm text-stone-300">
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Fiksi
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Non-Fiksi
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Bisnis
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Teknologi
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Sejarah
+                  </a>
+                </li>
+              </ul>
             </div>
+
+            {/* Column 3: Services */}
+            <div>
+              <h3 className="font-bold text-white mb-4">Layanan</h3>
+              <ul className="space-y-2 text-sm text-stone-300">
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Bantuan
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Pembayaran
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Pengiriman
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Pengembalian
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4: Contact */}
+            <div>
+              <h3 className="font-bold text-white mb-4">Kontak</h3>
+              <ul className="space-y-2 text-sm text-stone-300">
+                <li>Email: info@airbook.id</li>
+                <li>Telepon: (021) 1234-5678</li>
+                <li>Alamat: Jakarta, Indonesia</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-stone-400">
+            <p>
+              &copy; {new Date().getFullYear()} AirBook. All rights reserved.
+            </p>
+          </div>
         </div>
-    </footer>
+      </footer>
     </div>
   );
 }
