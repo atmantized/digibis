@@ -560,53 +560,37 @@ export default function Index() {
       </section>
 
       {/* About Us */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">About Us</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                AllBook adalah platform digital terdepan yang menghadirkan
-                ribuan koleksi buku berkualitas dari penerbit terpercaya. Kami
-                berkomitmen untuk menyediakan akses mudah dan terjangkau
-                terhadap pengetahuan melalui buku-buku pilihan.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Dengan pengalaman lebih dari 10 tahun di industri perbukuan,
-                kami memahami kebutuhan pembaca Indonesia dan selalu berupaya
-                memberikan pengalaman berbelanja buku yang terbaik.
-              </p>
-              <div className="grid grid-cols-3 gap-4 pt-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">10K+</div>
-                  <div className="text-sm text-muted-foreground">
-                    Buku Tersedia
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">50K+</div>
-                  <div className="text-sm text-muted-foreground">
-                    Pembaca Puas
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">100+</div>
-                  <div className="text-sm text-muted-foreground">
-                    Penerbit Partner
-                  </div>
-                </div>
-              </div>
-              <Button className="mt-6">Pelajari Lebih Lanjut</Button>
+            <div className="flex justify-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fa66a1fd0a10a4f87b0a512bfa2b6dfb5?format=webp&width=800"
+                alt="P.G Turner's Bookstore illustration"
+                className="max-w-full h-auto"
+              />
             </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-amber-100 to-orange-200 rounded-3xl flex items-center justify-center">
-                <div className="text-center">
-                  <Users className="h-24 w-24 text-primary mx-auto mb-4" />
-                  <p className="text-primary font-semibold">
-                    About Illustration
-                  </p>
-                </div>
-              </div>
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-foreground mb-6">
+                About Us
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Kami bukan sekadar toko buku online. Kami adalah komunitas
+                pembaca, penulis, dan pecinta literatur yang memiliki kesamaan
+                yang sama terhadap kekuatan dan keajaiban kata-kata. Didirikan
+                dengan visi untuk membuat buku lebih mudah diakses oleh semua
+                orang, AllBook dan kami berpacu menjadi wadah bagi para pembaca
+                untuk menemukan serta menyesuaikan klasik- klasik terbebut.
+                Platform kami bertujuan untuk menghubungkan individu yang
+                memiliki semangat terhadap dunia sastra, mendorong diskusi,
+                serta berbagi wawasan yang memperkaya pengalaman membaca.
+                Bergabunglah bersama kami dalam perjalanan literasi ini,
+                menjelajahi keajaiban cerita, dan memperluas wawasan melalui
+                buku-buku yang tentara.
+              </p>
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-md">
+                Learn More
+              </Button>
             </div>
           </div>
         </div>
