@@ -372,7 +372,7 @@ export default function Index() {
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F7af1206640364648829568c105a7e0da?format=webp&width=800"
+            src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F7e7ec2680f4d444b86279c5331f42098?format=webp&width=800"
             alt="Book Sale Now - Discover literary treasures at incredible prices"
             className="w-full h-full object-cover"
           />
