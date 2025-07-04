@@ -516,9 +516,11 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
             {/* Glossy Gentleman Guide */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="flex items-center space-x-1 mt-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                     <div className="w-1 h-1 bg-white rounded-full"></div>
@@ -553,9 +555,11 @@ export default function Index() {
             </div>
 
             {/* Start With Why */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-red-600 rounded-xl overflow-hidden mb-4 flex items-center justify-center">
-                <div className="text-white text-center font-black text-2xl leading-none tracking-wider">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-red-600 rounded-xl overflow-hidden mb-4 flex items-center justify-center relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:bg-red-700">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="text-white text-center font-black text-2xl leading-none tracking-wider relative z-10 group-hover:scale-110 transition-transform duration-300">
                   <div className="mb-2">START</div>
                   <div className="mb-2">WITH</div>
                   <div>WHY</div>
@@ -570,9 +574,11 @@ export default function Index() {
             </div>
 
             {/* Sapiens Grafis vol.2 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200">
-                <div className="absolute inset-0 flex flex-col p-3">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200 group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:border-[#664229]/50">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                <div className="absolute inset-0 flex flex-col p-3 relative z-10">
                   <div className="text-center mb-3">
                     <div className="text-lg font-bold text-gray-800 mb-1">
                       Sapiens
@@ -609,9 +615,11 @@ export default function Index() {
             </div>
 
             {/* Laut Bercerita */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 p-3">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:from-sky-400 group-hover:via-blue-500 group-hover:to-blue-600">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 p-3 relative z-10">
                   {/* Ocean waves and maritime elements */}
                   <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-blue-200/40 to-transparent"></div>
                   <div className="absolute top-6 left-2 right-2 h-6 bg-blue-300/30 rounded-full"></div>
@@ -653,9 +661,11 @@ export default function Index() {
             </div>
 
             {/* Glossy Gentleman Guide (repeat) */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="flex items-center space-x-1 mt-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                     <div className="w-1 h-1 bg-white rounded-full"></div>
