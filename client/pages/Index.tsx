@@ -518,35 +518,24 @@ export default function Index() {
       {/* Popular Books */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Koleksi Buku Populer
+            </h2>
+            <p className="text-muted-foreground">
+              Temukan buku-buku terlaris dan paling digemari pembaca
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
-            {/* Glossy Gentleman Guide */}
+            {/* Book 1 - Using uploaded image */}
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="flex items-center space-x-1 mt-1">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <div className="w-1 h-1 bg-white rounded-full"></div>
-                  </div>
-                  <div className="text-center flex-1 flex flex-col justify-center">
-                    <div className="w-10 h-10 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    <div className="text-sm font-light leading-tight tracking-wide">
-                      GLOSSY
-                      <br />
-                      GENTLEMAN
-                      <br />
-                      GUIDE
-                    </div>
-                  </div>
-                  <div className="text-[10px] text-center opacity-90 leading-tight">
-                    JET WIDODO, ADI SAPOETRO, LEO SIRTHUAS
-                  </div>
-                </div>
+              <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2F2c9129c76d2247e29562c4a879f0f215?format=webp&width=800"
+                  alt="Glossy Gentleman Guide"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
@@ -555,151 +544,83 @@ export default function Index() {
                 <p className="text-xs text-gray-600">
                   Jet Widodo, Adi Sapoetro, Leo Sirthuas
                 </p>
+                <p className="text-sm font-bold text-[#664229]">Rp 125,000</p>
               </div>
             </div>
 
-            {/* Start With Why */}
+            {/* Book 2 */}
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
-              <div className="w-full aspect-[3/4] bg-red-600 rounded-xl overflow-hidden mb-4 flex items-center justify-center relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:bg-red-700">
-                {/* Hover overlay */}
+              <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fd1012090813142299708a56fa09c5993"
+                  alt="Start With Why"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="text-white text-center font-black text-2xl leading-none tracking-wider relative z-10 group-hover:scale-110 transition-transform duration-300">
-                  <div className="mb-2">START</div>
-                  <div className="mb-2">WITH</div>
-                  <div>WHY</div>
-                </div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Start With Why
                 </h3>
                 <p className="text-xs text-gray-600">Simon Sinek</p>
+                <p className="text-sm font-bold text-[#664229]">Rp 95,000</p>
               </div>
             </div>
 
-            {/* Sapiens Grafis vol.2 */}
+            {/* Book 3 */}
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
-              <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200 group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:border-[#664229]/50">
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-[#664229]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
-                <div className="absolute inset-0 flex flex-col p-3 relative z-10">
-                  <div className="text-center mb-3">
-                    <div className="text-lg font-bold text-gray-800 mb-1">
-                      Sapiens
-                    </div>
-                    <div className="text-xs text-gray-600 font-medium tracking-wide">
-                      GRAFIS VOL.2
-                    </div>
-                  </div>
-                  <div className="flex-1 flex items-center justify-center relative">
-                    {/* Archaeological/cave painting style illustration */}
-                    <div className="relative w-full h-24 bg-gradient-to-br from-orange-100 to-amber-200 rounded-lg overflow-hidden">
-                      <div className="absolute inset-2">
-                        {/* Simple cave painting style figures */}
-                        <div className="w-8 h-8 bg-orange-600 rounded-full absolute top-1 left-2"></div>
-                        <div className="w-6 h-6 bg-amber-700 rounded-full absolute top-3 right-3"></div>
-                        <div className="w-4 h-8 bg-orange-800 absolute bottom-2 left-4"></div>
-                        <div className="w-3 h-6 bg-amber-800 absolute bottom-1 right-2"></div>
-                        {/* Simple landscape elements */}
-                        <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-orange-300 to-transparent"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-[10px] text-gray-700 text-center font-medium tracking-wider mt-2">
-                    YUVAL NOAH HARARI
-                  </div>
-                </div>
+              <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Ffe044db04e67486eb2a974f49091b8d4"
+                  alt="Sapiens Grafis vol.2"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Sapiens Grafis vol.2
                 </h3>
                 <p className="text-xs text-gray-600">Yuval Noah Harari</p>
+                <p className="text-sm font-bold text-[#664229]">Rp 150,000</p>
               </div>
             </div>
 
-            {/* Laut Bercerita */}
+            {/* Book 4 */}
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:from-sky-400 group-hover:via-blue-500 group-hover:to-blue-600">
-                {/* Hover overlay */}
+              <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F8aeedc592c71447882f8fa54f0853d4a"
+                  alt="Laut Bercerita"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 p-3 relative z-10">
-                  {/* Ocean waves and maritime elements */}
-                  <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-blue-200/40 to-transparent"></div>
-                  <div className="absolute top-6 left-2 right-2 h-6 bg-blue-300/30 rounded-full"></div>
-                  <div className="absolute top-10 left-4 right-4 h-4 bg-blue-400/40 rounded-full"></div>
-
-                  {/* Central illustration area */}
-                  <div className="absolute inset-x-4 top-16 bottom-16 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                    <div className="w-16 h-12 bg-white/30 rounded-lg relative overflow-hidden">
-                      <div className="absolute inset-1 bg-blue-600/40 rounded"></div>
-                      <div className="absolute top-2 left-2 w-4 h-3 bg-white/60 rounded-sm"></div>
-                      <div className="absolute bottom-2 right-2 w-3 h-2 bg-blue-200/80 rounded-sm"></div>
-                    </div>
-                  </div>
-
-                  {/* Title */}
-                  <div className="absolute bottom-8 left-0 right-0 text-center text-white">
-                    <div className="text-sm font-bold tracking-wide mb-1">
-                      LAUT
-                    </div>
-                    <div className="text-sm font-bold tracking-wide">
-                      BERCERITA
-                    </div>
-                  </div>
-
-                  {/* Author */}
-                  <div className="absolute bottom-2 left-0 right-0 text-center">
-                    <div className="text-[10px] text-white/90 tracking-wider">
-                      LEILA S. CHUDORI
-                    </div>
-                  </div>
-                </div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
                   Laut Bercerita
                 </h3>
                 <p className="text-xs text-gray-600">Leila S. Chudori</p>
+                <p className="text-sm font-bold text-[#664229]">Rp 85,000</p>
               </div>
             </div>
 
-            {/* Glossy Gentleman Guide (repeat) */}
+            {/* Book 5 */}
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="flex items-center space-x-1 mt-1">
-                    <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                    <div className="w-1 h-1 bg-white rounded-full"></div>
-                  </div>
-                  <div className="text-center flex-1 flex flex-col justify-center">
-                    <div className="w-10 h-10 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <div className="w-6 h-6 bg-black rounded-full flex items-center justify-center">
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                      </div>
-                    </div>
-                    <div className="text-sm font-light leading-tight tracking-wide">
-                      GLOSSY
-                      <br />
-                      GENTLEMAN
-                      <br />
-                      GUIDE
-                    </div>
-                  </div>
-                  <div className="text-[10px] text-center opacity-90 leading-tight">
-                    JET WIDODO, ADI SAPOETRO, LEO SIRTHUAS
-                  </div>
-                </div>
+              <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2Fe6c2111709f8400aa3900aae1a0b7abd"
+                  alt="Kamu Gak Sendiri"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="text-center space-y-1">
                 <h3 className="font-semibold text-gray-900 text-sm">
-                  Glossy Gentleman Guide
+                  Kamu Gak Sendiri
                 </h3>
-                <p className="text-xs text-gray-600">
-                  Jet Widodo, Adi Sapoetro, Leo Sirthuas
-                </p>
+                <p className="text-xs text-gray-600">Syahid Muhammad</p>
+                <p className="text-sm font-bold text-[#664229]">Rp 75,000</p>
               </div>
             </div>
           </div>
@@ -790,8 +711,8 @@ export default function Index() {
               AIRBook's Picks
             </h2>
             <p className="text-xl text-muted-foreground">
-              Setiap minggu, kami memilih buku-buku terbaik untuk Anda
-              nikmati. Temukan pilihan kami minggu ini!
+              Setiap minggu, kami memilih buku-buku terbaik untuk Anda nikmati.
+              Temukan pilihan kami minggu ini!
             </p>
           </div>
 
@@ -866,8 +787,8 @@ export default function Index() {
               Kerja Sama
             </h2>
             <p className="text-muted-foreground">
-              AIRBook telah dipercaya oleh penerbit terkemuka di Indonesia maupun
-              mancanegara.
+              AIRBook telah dipercaya oleh penerbit terkemuka di Indonesia
+              maupun mancanegara.
             </p>
           </div>
 
