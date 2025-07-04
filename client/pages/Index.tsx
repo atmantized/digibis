@@ -531,7 +531,7 @@ export default function Index() {
             <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
               <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2F2c9129c76d2247e29562c4a879f0f215?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2F5f554edceaec434cab8a13df266a90d9"
                   alt="Glossy Gentleman Guide"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
