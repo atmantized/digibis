@@ -300,17 +300,10 @@ export default function Index() {
                   variant="outline"
                   className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
                 >
-<<<<<<< HEAD
-                  Partner With Us
-                </Button>
-                <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
-                  Register As Client
-=======
                   Masuk
                 </Button>
                 <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
                   Daftar
->>>>>>> origin/main
                 </Button>
               </div>
               <Button variant="ghost" size="icon">
@@ -743,11 +736,7 @@ export default function Index() {
                 buku-buku yang tentara.
               </p>
               <Button className="bg-[#664229] hover:bg-[#664229]/90 text-white px-6 py-2 rounded-md">
-<<<<<<< HEAD
-                Learn More
-=======
                 Pelajari Lebih Lanjut
->>>>>>> origin/main
               </Button>
             </div>
           </div>
@@ -801,8 +790,8 @@ export default function Index() {
               AIRBook's Picks
             </h2>
             <p className="text-xl text-muted-foreground">
-              Setiap minggu, kami memilih buku-buku terbaik untuk Anda
-              nikmati. Temukan pilihan kami minggu ini!
+              Setiap minggu, kami memilih buku-buku terbaik untuk Anda nikmati.
+              Temukan pilihan kami minggu ini!
             </p>
           </div>
 
@@ -877,8 +866,8 @@ export default function Index() {
               Kerja Sama
             </h2>
             <p className="text-muted-foreground">
-              AIRBook telah dipercaya oleh penerbit terkemuka di Indonesia maupun
-              mancanegara.
+              AIRBook telah dipercaya oleh penerbit terkemuka di Indonesia
+              maupun mancanegara.
             </p>
           </div>
 
