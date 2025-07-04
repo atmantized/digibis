@@ -72,14 +72,18 @@ export default function Index() {
       week: 1,
       books: [
         {
-          title: "Modern Philosophy",
-          author: "Alex Turner",
-          image: "/placeholder.svg",
+          title: "Beyblade X, Vol. 3",
+          author:
+            "Kawamoto, Homura (Author)\nMuno, Hikaru (Author)\nDemizu, Posuka (Illustrator)",
+          image:
+            "https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fa880b4ac73a147b396a0128f65ec77b6",
         },
         {
-          title: "Data Science Basics",
-          author: "Lisa Park",
-          image: "/placeholder.svg",
+          title:
+            "The Care and Keeping of You 1: The Body Book for Younger Girls",
+          author: "Schafer, Valorie (Penulis)\nNatterson, Cara (Kontributor)",
+          image:
+            "https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fe15b30a0ae8840e38c46244861e349c6",
         },
       ],
     },
@@ -842,7 +846,7 @@ export default function Index() {
                           size="sm"
                           className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white"
                         >
-                          Learn More
+                          Pelajari Lebih Lanjut
                         </Button>
                       </div>
                     </div>
