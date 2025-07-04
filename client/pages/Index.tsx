@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState } from "react";
-=======
 import { useState, useEffect, useRef } from "react";
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,11 +15,8 @@ import {
   Search,
 } from "lucide-react";
 
-
 export default function Index() {
   const [currentWeek, setCurrentWeek] = useState(1);
-<<<<<<< HEAD
-=======
   const [isBookSectionVisible, setIsBookSectionVisible] = useState(false);
   const bookSectionRef = useRef(null);
 
@@ -32,6 +25,8 @@ export default function Index() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsBookSectionVisible(true);
+        } else {
+          setIsBookSectionVisible(false);
         }
       },
       {
@@ -51,7 +46,6 @@ export default function Index() {
     };
   }, []);
 
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
   const featuredBooks = [
     {
       title: "The Silent Patient",
@@ -78,14 +72,18 @@ export default function Index() {
       week: 1,
       books: [
         {
-          title: "Modern Philosophy",
-          author: "Alex Turner",
-          image: "/placeholder.svg",
+          title: "Beyblade X, Vol. 3",
+          author:
+            "Kawamoto, Homura (Author)\nMuno, Hikaru (Author)\nDemizu, Posuka (Illustrator)",
+          image:
+            "https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fa880b4ac73a147b396a0128f65ec77b6",
         },
         {
-          title: "Data Science Basics",
-          author: "Lisa Park",
-          image: "/placeholder.svg",
+          title:
+            "The Care and Keeping of You 1: The Body Book for Younger Girls",
+          author: "Schafer, Valorie (Penulis)\nNatterson, Cara (Kontributor)",
+          image:
+            "https://cdn.builder.io/api/v1/image/assets%2Fc82e82c3cda3499f81e71ab82188f842%2Fe15b30a0ae8840e38c46244861e349c6",
         },
       ],
     },
@@ -227,6 +225,10 @@ export default function Index() {
     { name: "Mizan", logo: "/placeholder.svg" },
     { name: "Erlangga", logo: "/placeholder.svg" },
     { name: "Bentang Pustaka", logo: "/placeholder.svg" },
+    { name: "Kompas", logo: "/placeholder.svg" },
+    { name: "Elex Media", logo: "/placeholder.svg" },
+    { name: "Gema Insani", logo: "/placeholder.svg" },
+    { name: "Alvabet", logo: "/placeholder.svg" },
   ];
 
   const faqs = [
@@ -249,7 +251,6 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container mx-auto px-4 py-4">
@@ -257,13 +258,8 @@ export default function Index() {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-<<<<<<< HEAD
-                  src="/airbook_logo.png" 
-                  className="w-full h-full object-cover" 
-=======
                   src="/airbook_logo.png"
                   className="w-full h-full object-cover"
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
                 />
               </div>
               <span className="text-lg font-medium text-foreground">
@@ -276,25 +272,25 @@ export default function Index() {
                 href="#"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
-                Home
+                Halaman Utama
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Collection
+                Koleksi
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Contact Us
+                Hubungi Kami
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                About us
+                Tentang Kami
               </a>
             </div>
 
@@ -304,10 +300,10 @@ export default function Index() {
                   variant="outline"
                   className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
                 >
-                  Partner With Us
+                  Masuk
                 </Button>
                 <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
-                  Register As Client
+                  Daftar
                 </Button>
               </div>
               <Button variant="ghost" size="icon">
@@ -325,10 +321,6 @@ export default function Index() {
       <section className="relative py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-<<<<<<< HEAD
-            
-=======
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
             {/* Text Content - Adjusted for smaller size */}
             <div className="space-y-6 text-center md:text-left md:pl-8">
               <h1 className="text-4xl md:text-4xl lg:text-5xl font-serif font-medium text-stone-800 leading-tight">
@@ -339,14 +331,6 @@ export default function Index() {
                 <span className="font-bold">AIRBook</span>
               </h1>
               <p className="text-lg text-stone-600 max-w-md mx-auto md:mx-0">
-<<<<<<< HEAD
-                Nikmati kemudahan membeli buku kapan saja dan di mana saja, hanya dengan beberapa klik.
-              </p>
-              <div className="pt-4">
-                 <button className="bg-stone-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-stone-700 transition-all duration-300 shadow-lg">
-                    Mulai Berbelanja
-                 </button>
-=======
                 Nikmati kemudahan membeli buku kapan saja dan di mana saja,
                 hanya dengan beberapa klik.
               </p>
@@ -354,7 +338,6 @@ export default function Index() {
                 <button className="bg-[#664229] text-white font-bold py-3 px-8 rounded-lg hover:bg-[#664229]/90 transition-all duration-300 shadow-lg">
                   Mulai Berbelanja
                 </button>
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
               </div>
             </div>
 
@@ -364,11 +347,7 @@ export default function Index() {
                 src="https://cdn.builder.io/api/v1/image/assets%2F3932a6b5696a4ffab89fc4c5aa10f6d8%2F16232a4b310c4e859ce7f6c01ff260e6?format=webp&width=800"
                 alt="Ilustrasi seseorang sedang membaca buku di atas tumpukan buku besar"
                 className="w-full max-w-md lg:max-w-lg h-auto"
-<<<<<<< HEAD
-                />
-=======
               />
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
             </div>
           </div>
         </div>
@@ -541,9 +520,11 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 max-w-6xl mx-auto">
             {/* Glossy Gentleman Guide */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="flex items-center space-x-1 mt-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                     <div className="w-1 h-1 bg-white rounded-full"></div>
@@ -578,9 +559,11 @@ export default function Index() {
             </div>
 
             {/* Start With Why */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-red-600 rounded-xl overflow-hidden mb-4 flex items-center justify-center">
-                <div className="text-white text-center font-black text-2xl leading-none tracking-wider">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-red-600 rounded-xl overflow-hidden mb-4 flex items-center justify-center relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:bg-red-700">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="text-white text-center font-black text-2xl leading-none tracking-wider relative z-10 group-hover:scale-110 transition-transform duration-300">
                   <div className="mb-2">START</div>
                   <div className="mb-2">WITH</div>
                   <div>WHY</div>
@@ -595,9 +578,11 @@ export default function Index() {
             </div>
 
             {/* Sapiens Grafis vol.2 */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200">
-                <div className="absolute inset-0 flex flex-col p-3">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-white rounded-xl overflow-hidden mb-4 relative border border-gray-200 group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:border-[#664229]/50">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+                <div className="absolute inset-0 flex flex-col p-3 relative z-10">
                   <div className="text-center mb-3">
                     <div className="text-lg font-bold text-gray-800 mb-1">
                       Sapiens
@@ -634,9 +619,11 @@ export default function Index() {
             </div>
 
             {/* Laut Bercerita */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 p-3">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-gradient-to-br from-sky-300 via-blue-400 to-blue-500 rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] group-hover:from-sky-400 group-hover:via-blue-500 group-hover:to-blue-600">
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 p-3 relative z-10">
                   {/* Ocean waves and maritime elements */}
                   <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-blue-200/40 to-transparent"></div>
                   <div className="absolute top-6 left-2 right-2 h-6 bg-blue-300/30 rounded-full"></div>
@@ -678,9 +665,11 @@ export default function Index() {
             </div>
 
             {/* Glossy Gentleman Guide (repeat) */}
-            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative">
-                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4">
+            <div className="bg-white rounded-2xl p-5 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer group hover:scale-105 hover:-translate-y-2 hover:ring-4 hover:ring-[#664229]/20">
+              <div className="w-full aspect-[3/4] bg-black rounded-xl overflow-hidden mb-4 relative group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02]">
+                <div className="absolute inset-0 bg-black flex flex-col items-center justify-between text-white p-4 group-hover:bg-gray-900 transition-colors duration-300">
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-[#664229]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="flex items-center space-x-1 mt-1">
                     <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                     <div className="w-1 h-1 bg-white rounded-full"></div>
@@ -730,7 +719,7 @@ export default function Index() {
             </div>
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                About Us
+                Tentang Kami
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Kami bukan sekadar toko buku online. Kami adalah komunitas
@@ -747,7 +736,7 @@ export default function Index() {
                 buku-buku yang tentara.
               </p>
               <Button className="bg-[#664229] hover:bg-[#664229]/90 text-white px-6 py-2 rounded-md">
-                Learn More
+                Pelajari Lebih Lanjut
               </Button>
             </div>
           </div>
@@ -798,10 +787,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-primary mb-4">
-              Weekly Picks
+              AIRBook's Picks
             </h2>
             <p className="text-xl text-muted-foreground">
-              Discover our staff's favorite selections, updated every week.
+              Setiap minggu, kami memilih buku-buku terbaik untuk Anda
+              nikmati. Temukan pilihan kami minggu ini!
             </p>
           </div>
 
@@ -813,13 +803,8 @@ export default function Index() {
                   onClick={() => setCurrentWeek(week.week)}
                   className={`px-6 py-2 rounded-md font-medium transition-colors ${
                     currentWeek === week.week
-<<<<<<< HEAD
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-primary"
-=======
                       ? "bg-[#664229] text-white"
                       : "text-muted-foreground hover:text-[#664229]"
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
                   }`}
                 >
                   WEEK {week.week}
@@ -860,13 +845,9 @@ export default function Index() {
                         <Button
                           variant="outline"
                           size="sm"
-<<<<<<< HEAD
-                          className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-=======
                           className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white"
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
                         >
-                          Learn More
+                          Pelajari Lebih Lanjut
                         </Button>
                       </div>
                     </div>
@@ -878,31 +859,73 @@ export default function Index() {
       </section>
 
       {/* Media Partners */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Media Partner
+              Kerja Sama
             </h2>
             <p className="text-muted-foreground">
-              Dipercaya oleh penerbit terkemuka
+              AIRBook telah dipercaya oleh penerbit terkemuka di Indonesia maupun
+              mancanegara.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-6 bg-background rounded-lg hover:shadow-md transition-shadow"
-              >
-                <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center">
-                  <span className="text-xs text-gray-600 font-semibold">
-                    {partner.name}
-                  </span>
+
+          {/* Infinite Horizontal Scrolling Partners */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll">
+              {/* First set of partners */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
+                >
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                      {partner.name}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex items-center justify-center p-6 bg-background rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 mx-4 min-w-[200px]"
+                >
+                  <div className="w-24 h-12 bg-gradient-to-br from-gray-200 to-gray-300 rounded flex items-center justify-center transition-all duration-300 hover:from-[#664229]/10 hover:to-[#664229]/20">
+                    <span className="text-xs text-gray-600 font-semibold hover:text-[#664229] transition-colors">
+                      {partner.name}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* CSS Keyframes for infinite scrolling */}
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .animate-scroll {
+            animation: scroll 20s linear infinite;
+            width: calc(
+              200px * ${partners.length} * 2 + 32px * ${partners.length} * 2
+            );
+          }
+
+          .animate-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* Features */}
@@ -978,59 +1001,6 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-<<<<<<< HEAD
-    <footer className="bg-[#664229] text-stone-300 py-12">
-        <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                {/* Column 1: Brand and Social Media */}
-                <div className="space-y-4">
-                    <div className="flex items-center space-x-2">
-                        <BookOpen className="h-8 w-8 text-white" />
-                        <span className="text-xl font-bold text-white">AirBook</span>
-                    </div>
-                    <p className="text-stone-300 text-sm">
-                        Platform terpercaya untuk menemukan dan membeli buku berkualitas dengan harga terjangkau.
-                    </p>
-                    
-                </div>
-
-                {/* Column 2: Categories */}
-                <div>
-                    <h3 className="font-bold text-white mb-4">Kategori</h3>
-                    <ul className="space-y-2 text-sm text-stone-300">
-                        <li><a href="#" className="hover:text-white transition-colors">Fiksi</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Non-Fiksi</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Bisnis</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Teknologi</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Sejarah</a></li>
-                    </ul>
-                </div>
-
-                {/* Column 3: Services */}
-                <div>
-                    <h3 className="font-bold text-white mb-4">Layanan</h3>
-                    <ul className="space-y-2 text-sm text-stone-300">
-                        <li><a href="#" className="hover:text-white transition-colors">Bantuan</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Pembayaran</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Pengiriman</a></li>
-                        <li><a href="#" className="hover:text-white transition-colors">Pengembalian</a></li>
-                    </ul>
-                </div>
-
-                {/* Column 4: Contact */}
-                <div>
-                    <h3 className="font-bold text-white mb-4">Kontak</h3>
-                    <ul className="space-y-2 text-sm text-stone-300">
-                        <li>Email: info@airbook.id</li>
-                        <li>Telepon: (021) 1234-5678</li>
-                        <li>Alamat: Jakarta, Indonesia</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-stone-400">
-                <p>&copy; {new Date().getFullYear()} AirBook. All rights reserved.</p>
-            </div>
-=======
       <footer className="bg-[#664229] text-stone-300 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -1120,9 +1090,8 @@ export default function Index() {
               &copy; {new Date().getFullYear()} AirBook. All rights reserved.
             </p>
           </div>
->>>>>>> 73306a04c1cd7115475d364abd1c1ed4fa9ff52b
         </div>
-    </footer>
+      </footer>
     </div>
   );
 }
