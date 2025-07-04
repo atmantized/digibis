@@ -272,25 +272,25 @@ export default function Index() {
                 href="#"
                 className="text-foreground hover:text-primary transition-colors font-medium"
               >
-                Home
+                Halaman Utama
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Collection
+                Koleksi
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                Contact Us
+                Hubungi Kami
               </a>
               <a
                 href="#"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                About us
+                Tentang Kami
               </a>
             </div>
 
@@ -300,10 +300,17 @@ export default function Index() {
                   variant="outline"
                   className="border-[#664229] text-[#664229] hover:bg-[#664229] hover:text-white px-4 py-2 h-10"
                 >
+<<<<<<< HEAD
                   Partner With Us
                 </Button>
                 <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
                   Register As Client
+=======
+                  Masuk
+                </Button>
+                <Button className="bg-[#664229] text-white hover:bg-[#664229]/90 px-4 py-2 h-10">
+                  Daftar
+>>>>>>> origin/main
                 </Button>
               </div>
               <Button variant="ghost" size="icon">
@@ -719,7 +726,7 @@ export default function Index() {
             </div>
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                About Us
+                Tentang Kami
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Kami bukan sekadar toko buku online. Kami adalah komunitas
@@ -736,7 +743,11 @@ export default function Index() {
                 buku-buku yang tentara.
               </p>
               <Button className="bg-[#664229] hover:bg-[#664229]/90 text-white px-6 py-2 rounded-md">
+<<<<<<< HEAD
                 Learn More
+=======
+                Pelajari Lebih Lanjut
+>>>>>>> origin/main
               </Button>
             </div>
           </div>
@@ -787,10 +798,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-primary mb-4">
-              Weekly Picks
+              AIRBook's Picks
             </h2>
             <p className="text-xl text-muted-foreground">
-              Discover our staff's favorite selections, updated every week.
+              Setiap minggu, kami memilih buku-buku terbaik untuk Anda
+              nikmati. Temukan pilihan kami minggu ini!
             </p>
           </div>
 
@@ -862,10 +874,11 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Media Partner
+              Kerja Sama
             </h2>
             <p className="text-muted-foreground">
-              Dipercaya oleh penerbit terkemuka
+              AIRBook telah dipercaya oleh penerbit terkemuka di Indonesia maupun
+              mancanegara.
             </p>
           </div>
 
